@@ -1,2 +1,2 @@
 # Turkcell-GYK-Ankara-066
-Derslerde yaptığımız örnekler
+Turkcell Geleceği Yazan Kadınlar Android eğitimiyle, derslerde işlediğimiz konularla ilgili örnekler.
