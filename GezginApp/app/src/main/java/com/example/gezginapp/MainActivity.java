@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity
         mAuth = FirebaseAuth.getInstance();
 
 
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getSupportFragmentManager()
+                .beginTransaction();
         // content_main.xml dosyasında kullanılan frame'in idsi content_frame
         transaction.replace(R.id.content_frame, new Anasayfa());
         transaction.commit();
@@ -109,13 +110,17 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.nav_logout) {
+            selectedFragment = new Anasayfa();
+
             mAuth.signOut();
-            Intent logoutIntent = new Intent(MainActivity.this,LoginActivity.class);
+            Intent logoutIntent = new Intent(MainActivity.this,
+                    LoginActivity.class);
             startActivity(logoutIntent);
         }
 
-
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        // seçtiğimiz fragmenti başlatma yapıyoruz.
+        FragmentTransaction transaction = getSupportFragmentManager()
+                .beginTransaction();
         transaction.replace(R.id.content_frame, selectedFragment);
         transaction.commit();
 

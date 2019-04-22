@@ -102,14 +102,14 @@ public class LoginActivity extends AppCompatActivity {
                             // MainActivity'e geçiş yapar
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             finish();
-                            // bilgilendirme yazısı çıkar kısa bir sürelik
+
                             Log.d("Email", "signInWithEmail:success");
                         }
                         else
                         {
                             // sonuç başarılı değilse giriş yapamadığından
                             // sayfa geçişi olmaz, sadece
-                            // bilgilendirme yazısı çıkar kısa bir sürelik
+
                             Log.w("Fail", "signInWithEmail:failure", task.getException());
                         }
 

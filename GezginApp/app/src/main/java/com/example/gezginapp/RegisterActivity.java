@@ -80,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(!alinanEmail.isEmpty() && !alinanParola.isEmpty() && !alinanParolaTekrar.isEmpty())
         {
             // girilen 2 parolanın denkliğine bakar.
-            if(alinanParola.equals(yeniUserParolaTekrar))
+            if(alinanParola.equals(alinanParolaTekrar))
             {
                 // karışık ve uzun işlemler yapılacağı için
                 // fonksiyon çağırıyoruz.
@@ -106,7 +106,7 @@ public class RegisterActivity extends AppCompatActivity {
         // mail ve parola ile yeni kayıt oluşturmak istiyorsak create ile başlarız
         mAuth.createUserWithEmailAndPassword(alinanEmail, alinanParola)
 
-                // hatalarla ilgili özelellikleri burda tanımlar, belirtiriz.
+                // hatalarla ilgili özellikleri burda tanımlar, belirtiriz.
                 .addOnFailureListener(this, new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -136,7 +136,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Mail zaten kayıtlı", Toast.LENGTH_SHORT).show();
                             }
                         }
-
 
                     }
                 })

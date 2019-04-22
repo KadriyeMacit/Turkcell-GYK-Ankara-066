@@ -39,6 +39,9 @@ public class Anasayfa extends Fragment {
 
 
 
+
+
+
     private OnFragmentInteractionListener mListener;
 
     public Anasayfa() {
@@ -83,14 +86,19 @@ public class Anasayfa extends Fragment {
 
         // yukarıda PostModel'den oluşturduğumuz listeye
         // elemanlar ekliyoruz.
-        postList.add(new PostModel(R.drawable.foto1,"Trabzon","Karadeniz'in incisi olarak tabir edilen, eşsiz doğasıyla nefes kesen bir şehir Trabzon."));
-        postList.add(new PostModel(R.drawable.foto2,"Mardin","Dicle ve Fırat nehirleri arasında yer alan Mardin Güneydoğu Anadolu Bölgesi'nin en çok merak edilen şehirlerinden biridir."));
-        postList.add(new PostModel(R.drawable.foto3,"İzmir","ürkiye'nin batısında, Ege Denizi'nin kıyısında yer alan Ege'nin İncisi İzmir, Türkiye'nin 3'üncü büyük kentidir."));
-        postList.add(new PostModel(R.drawable.foto4,"İstanbul","Avrupa ve Asya'yı birbirine bağlayan, çok sayıda medeniyetin izlerini taşıyan istanbul"));
+        postList.add(new PostModel(R.drawable.foto1,"Trabzon",
+                "Karadeniz'in incisi olarak tabir edilen, eşsiz doğasıyla nefes kesen bir şehir Trabzon."));
+        postList.add(new PostModel(R.drawable.foto2,"Mardin",
+                "Dicle ve Fırat nehirleri arasında yer alan Mardin Güneydoğu Anadolu Bölgesi'nin en çok merak edilen şehirlerinden biridir."));
+        postList.add(new PostModel(R.drawable.foto3,"İzmir",
+                "ürkiye'nin batısında, Ege Denizi'nin kıyısında yer alan Ege'nin İncisi İzmir, Türkiye'nin 3'üncü büyük kentidir."));
+        postList.add(new PostModel(R.drawable.foto4,"İstanbul",
+                "Avrupa ve Asya'yı birbirine bağlayan, çok sayıda medeniyetin izlerini taşıyan istanbul"));
 
 
         // adapter tanımlıyoruz listView'i kullanabilmek için
-        CustomPostAdapter customPostAdapter = new CustomPostAdapter(getLayoutInflater(),postList);
+        CustomPostAdapter customPostAdapter =
+                new CustomPostAdapter(getLayoutInflater(), postList);
         postListView.setAdapter(customPostAdapter);
 
 
@@ -112,10 +120,12 @@ public class Anasayfa extends Fragment {
 
                 // pozisyonuna göre seçilen itemin ikonunu atıyoruz.
                 int selectedIcon = postList.get(position).getPostPicture();
+
                 String message = selectedName + " " + selectedDescription;
                 builder.setIcon(selectedIcon);
                 builder.setMessage(message);
-                builder.setNegativeButton("TAMAM", new DialogInterface.OnClickListener(){
+                builder.setNegativeButton("TAMAM",
+                        new DialogInterface.OnClickListener(){
                     public void onClick(DialogInterface dialog, int id) {
 
                     }
@@ -133,22 +143,8 @@ public class Anasayfa extends Fragment {
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+
 
     /**
      * This interface must be implemented by activities that contain this
