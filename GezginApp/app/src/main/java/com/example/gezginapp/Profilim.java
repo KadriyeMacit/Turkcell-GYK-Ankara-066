@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -84,6 +85,18 @@ public class Profilim extends Fragment {
         profileName = (TextView) profileView.findViewById(R.id.profile_name);
         profileBio = (TextView) profileView.findViewById(R.id.profile_bio);
         profileUserInstagram = (ImageView) profileView.findViewById(R.id.profile_user_instagram);
+
+        Button degistirmeButonu = (Button) profileView.findViewById(R.id.degistir);
+
+        degistirmeButonu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AddPhotoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         // resme tıklama özelliği veriyoruz.
         profileUserInstagram.setOnClickListener(new View.OnClickListener() {

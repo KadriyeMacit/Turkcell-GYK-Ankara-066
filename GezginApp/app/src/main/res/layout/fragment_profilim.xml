@@ -51,4 +51,12 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/instagram_ic" />
 
+    <Button
+        android:id="@+id/degistir"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="PP değiştir" />
+
 </RelativeLayout>

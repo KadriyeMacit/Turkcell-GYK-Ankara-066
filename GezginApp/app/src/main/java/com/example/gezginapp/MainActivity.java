@@ -109,6 +109,10 @@ public class MainActivity extends AppCompatActivity
             selectedFragment = new Profilim();
         }
 
+        else if (id == R.id.nav_notes) {
+            selectedFragment = new MyNotes();
+        }
+
         else if (id == R.id.nav_logout) {
             selectedFragment = new Anasayfa();
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddNoteActivity">
+
+    <EditText
+        android:id="@+id/notYaz"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Not giriniz"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <Button
+        android:layout_margin="10dp"
+        android:background="#614A4A"
+        android:textColor="#fff"
+        android:id="@+id/notEkle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yeni not ekle"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <Button
+        android:layout_margin="10dp"
+        android:background="#614A4A"
+        android:textColor="#fff"
+        android:id="@+id/notListele"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notlarıma dön"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="411dp" />
+</LinearLayout>

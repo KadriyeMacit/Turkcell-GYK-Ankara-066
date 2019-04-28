@@ -13,6 +13,11 @@
             android:icon="@drawable/ic_person_black_24dp"
             android:title="Profilim" />
 
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Notlarım" />
+
 
     </group>
 
